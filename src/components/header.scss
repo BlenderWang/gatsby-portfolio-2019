@@ -1,0 +1,46 @@
+@import './layout.scss';
+
+#header {
+    position: relative;
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        background: $secondary;
+        position: relative;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        grid-gap: 2em;
+
+        .header-img {
+            position: absolute;
+            top: 68%;
+            left: 5%;
+            max-width: 8.2em;
+            height: auto;
+            transform: rotate(-15deg);
+        }
+
+        .my-logo {
+            width: 7.7em;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        @media (max-width: 420px) {
+            .header-img {
+                max-width: 5.6em;
+                top: 75%;
+            }
+        }
+    }
+}

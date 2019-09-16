@@ -1,0 +1,117 @@
+@import './layout.scss';
+
+.nav {
+    #trigger, #burger {
+        position: fixed;
+    }
+
+    #burger::before, #burger::after {
+        position: absolute;
+    }
+
+    #trigger, #burger, #burger::before, #burger::after {
+        top: 25px;
+        right: 25px;
+        background: $primary;
+        width: 30px;
+        height: 5px;
+        cursor: pointer;
+        z-index: 100;
+        transition: .2s ease-in-out;
+    }
+
+    #trigger {
+        height: 25px;
+        background: none;
+    }
+
+    #burger::before {
+        content: '';
+        top: 10px;
+        right: 0;
+    }
+
+    #burger::after {
+        content: '';
+        top: 20px;
+        right: 0;
+    }
+
+    // burger rotation
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        transform: rotate(180deg);
+        transition: transform .2s ease-in-out;
+    }
+
+    // burger transform into arrow
+    #menu-toggle:checked + #trigger + #burger::before {
+        width: 20px;
+        top: 0;
+        right: 18px;
+        transform: rotate(45deg) translateX(10px);
+        transition: transform .2s ease-in-out;
+    }
+
+    #menu-toggle:checked + #trigger + #burger::after {
+        width: 20px;
+        top: 0;
+        right: 18px;
+        transform: rotate(-45deg) translateX(10px);
+        transition: transform .2s ease-in-out;
+    }
+
+    #menu {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 8em;
+        height: 8em;
+        background: $white;
+        border-bottom-left-radius: 100%;
+        box-shadow: 3px 1px 5px 1px darken($white, 30%);
+        transition: .2s;
+    }
+
+    #menu-toggle:checked ~ #menu {
+        width: 12em;
+        height: 100vh;
+        border-bottom-left-radius: 0;
+    }
+
+    li, a {
+        margin: 85px 0 -55px 20px;
+        color: $primary;
+        font-size: 14pt;
+        font-weight: 700;
+        line-height: 1.8;
+        text-decoration: none;
+        text-transform: none;
+        list-style: none;
+        outline: 0;
+        display: none;
+    }
+
+    li {
+        width: 10em;
+    }
+
+    a:hover, a:focus {
+        display: block;
+        color: $gray-900;
+        background-color: $white;
+        transition: all .5s;
+    }
+
+    #menu-toggle:checked + #trigger ~ #menu > li, a {
+        display: block;
+    }
+
+    // hide the checkbox
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        display: none;
+    }
+}
