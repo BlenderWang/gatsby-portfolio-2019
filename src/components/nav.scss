@@ -13,11 +13,11 @@
         top: 25px;
         right: 25px;
         background: $primary;
-        width: 30px;
+        width: 38px;
         height: 5px;
         cursor: pointer;
         z-index: 100;
-        transition: .2s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #trigger {
@@ -27,12 +27,14 @@
 
     #burger::before {
         content: '';
+        width: 30px;
         top: 10px;
         right: 0;
     }
 
     #burger::after {
         content: '';
+        width: 22px;
         top: 20px;
         right: 0;
     }
@@ -41,27 +43,31 @@
     #menu-toggle:checked + #trigger + #burger {
         top: 35px;
         transform: rotate(180deg);
-        transition: transform .2s ease-in-out;
+        transition: transform .3s ease-in-out;
     }
 
     // burger transform into arrow
     #menu-toggle:checked + #trigger + #burger::before {
         width: 20px;
         top: 0;
-        right: 18px;
-        transform: rotate(45deg) translateX(10px);
-        transition: transform .2s ease-in-out;
+        right: 30px;
+        transform: rotate(45deg) translateX(8px);
+        transition: transform .3s ease-in-out;
     }
 
     #menu-toggle:checked + #trigger + #burger::after {
         width: 20px;
         top: 0;
-        right: 18px;
-        transform: rotate(-45deg) translateX(10px);
-        transition: transform .2s ease-in-out;
+        right: 30px;
+        transform: rotate(-45deg) translateX(8px);
+        transition: transform .3s ease-in-out;
     }
 
     #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 0;
         padding: 0;
         position: fixed;
@@ -76,15 +82,15 @@
     }
 
     #menu-toggle:checked ~ #menu {
-        width: 12em;
+        width: 100vw;
         height: 100vh;
         border-bottom-left-radius: 0;
     }
 
     li, a {
-        margin: 85px 0 -55px 20px;
+        margin: 1rem 0 -.5rem .2rem;
         color: $primary;
-        font-size: 14pt;
+        font-size: 1.3em;
         font-weight: 700;
         line-height: 1.8;
         text-decoration: none;
@@ -102,7 +108,7 @@
         display: block;
         color: $gray-900;
         background-color: $white;
-        transition: all .5s;
+        transition: transition-ease;
     }
 
     #menu-toggle:checked + #trigger ~ #menu > li, a {

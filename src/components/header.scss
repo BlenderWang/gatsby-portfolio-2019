@@ -7,7 +7,7 @@
         width: 100%;
         min-height: 100vh;
         height: auto;
-        background: $secondary;
+        background: linear-gradient(#ecb607fa, #ecb607c9), url(../images/texture-unsplash.jpg) center/cover no-repeat;
         position: relative;
         display: grid;
         justify-items: center;
@@ -16,15 +16,11 @@
 
         .header-img {
             position: absolute;
-            top: 68%;
-            left: 5%;
+            top: 62%;
+            left: 8%;
             max-width: 8.2em;
             height: auto;
             transform: rotate(-15deg);
-        }
-
-        .my-logo {
-            width: 7.7em;
         }
 
         .section-title {

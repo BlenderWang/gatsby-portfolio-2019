@@ -10,11 +10,11 @@ const Nav = ({ siteTitle }) => (
         <label for="menu-toggle" id="burger"></label>
 
         <ul id="menu">
-            <li className='home-section'><a href='#home'>Home</a></li>
-            <li className='about-section'><a href='#about'>About Me</a></li>
+            <li className='home-section'><Link to='/'>Home</Link></li>
+            <li className='about-section'><Link to='/#about'>About Me</Link></li>
             <li className='skills-section'><Link to='/skills'>Skills</Link></li>
             <li className='portfolio-section'><Link to='/portfolio'>Portfolio</Link></li>
-            <li className='contact-section'><a href='/contact'>Contact Me</a></li>
+            <li className='contact-section'><Link to='/contact'>Contact Me</Link></li>
         </ul>
     </div>
 )

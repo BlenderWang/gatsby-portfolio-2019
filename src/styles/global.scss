@@ -13,3 +13,7 @@ $black: #0d0d0d !default;
 
 $primary: #1D809F !default;
 $secondary: #ecb807 !default;
+
+@mixin transition-ease {
+    transition: all .5s ease-in-out;
+}
