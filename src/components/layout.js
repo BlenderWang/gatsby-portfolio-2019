@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Nav from "./nav"
+import About from "./about"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Nav />
+      <About />
       <div
         style={{
           margin: `0 auto`,
@@ -37,10 +39,15 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer
+          style={{
+            margin: `0 auto`,
+            display: `flex`,
+            justifyContent: `center`,
+            marginTop: `1rem`,
+          }}
+        >
+          Shirley Wang || WANGIMATION © {new Date().getFullYear()}
         </footer>
       </div>
     </>

@@ -1,0 +1,33 @@
+@import './layout.scss';
+
+#about {
+    display: grid;
+    grid:
+        ". title title . " auto
+        ". image desc . " auto
+        ". btn btn ." auto /
+        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;;
+    grid-gap: 2em 5em;
+    justify-items: center;
+    align-content: center;
+    margin: 2.3em;
+
+    .section-title {
+        grid-area: title;
+    }
+
+    .my-pic {
+        grid-area: image;
+        width: minmax(7.8em, 1fr);
+        border-radius: 50%;
+    }
+
+    .about__paragraph {
+        grid-area: desc;
+        font-size: 18px;
+    }
+
+    .btn {
+        grid-area: btn;
+    }
+}
