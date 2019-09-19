@@ -2,14 +2,14 @@ import React from "react"
 // import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import headerImg from "../images/header-img.svg"
-import nauticalLogo from "../images/nauticalLogo.svg"
+import NauticalLogo from "./nauticalLogo"
 import './header.scss';
 
 const Header = () => {
     return(
       <header id="header">
         <div className="container">
-            <img className="nautical-logo" src={nauticalLogo} alt="My Logo" />
+            <NauticalLogo />
             <img className="header-img" src={headerImg} alt="SVG header" />
             <h2 className="section-title">Shirley Wang</h2>
             <h3 className="section-desc">

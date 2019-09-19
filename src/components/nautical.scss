@@ -1,0 +1,28 @@
+@import './layout.scss';
+
+svg {
+    cursor: pointer;
+}
+
+.nautical-logo-group {
+    #ribbon, #blinks {
+        transition: 300ms all;
+        transform-origin: 50% 50%;
+    }
+
+    #blinks {
+        opacity: 0;
+    }
+
+    &:hover {
+        #ribbon {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+
+        #blinks {
+            opacity: 1;
+            transform: scale(.8) rotate(180deg);
+        }
+    }
+}
