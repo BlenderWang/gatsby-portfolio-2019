@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Nav from "./nav"
 import About from "./about"
+import Social from "./social"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -39,6 +40,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+        <Social />
         <footer
           style={{
             margin: `0 auto`,

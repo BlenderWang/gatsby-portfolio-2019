@@ -18,7 +18,7 @@
             cursor: pointer;
 
             &:hover {
-                filter: invert(.3);
+                transform: scale(2);
                 @include transition-ease;
             }
         }
@@ -30,6 +30,7 @@
             max-width: 8.2em;
             height: auto;
             transform: rotate(-15deg);
+            filter: drop-shadow(2px 3px 3px lighten($black, 30%));
         }
 
         .section-title {

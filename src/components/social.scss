@@ -1,0 +1,48 @@
+@import './layout.scss';
+
+.social-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    &__link {
+        display: inline-block;
+        transition: color .1s;
+
+        &:hover i {
+            color: $white;
+            background: $gray-800;
+            border-radius: 5px;
+            transform: rotate(45deg) scale(.8);
+
+            &::before {
+              transform: rotate(-45deg) scale(1.5);
+            }
+        }
+    }
+
+    i {
+        display: inline-block;
+        font-size: 30px;
+        background: transparent;
+        width: 60px;
+        height: 60px;
+        color: $gray-900;
+        border-radius: 50%;
+        line-height: 60px;
+        margin: 0 10px 10px 10px;
+        transition-duration: .3s;
+
+        &::before {
+          transition-duration: .3s;
+        }
+
+        &.fab::before {
+          display: block;
+        }
+    }
+}
