@@ -15,7 +15,7 @@ const Header = () => {
             <h3 className="section-desc">
                 <em>Front-End Dev & Graphic Designer</em>
             </h3>
-            <Link className="btn btn-primary" to="#about">Find Out More</Link>
+            <Link className="btn btn-primary" to="/#about">Find Out More</Link>
         </div>
       </header>
     )
