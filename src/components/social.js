@@ -1,20 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import FontAwesomeIcon from 'react-fontawesome'
 
 import './social.scss';
 
 const SocialMedia = () => {
     return (
         <div className="social-icons">
-            <Link to="https://github.com/BlenderWang" className="social-icons__link">
+            <a href="https://github.com/BlenderWang" className="social-icons__link">
                 <i className="fab fa-github fa-2x"></i>
-            </Link>
-            <Link to="https://www.linkedin.com/in/shirley-wang-37b7457b/" className="social-icons__link">
+                <FontAwesomeIcon name='github' />
+            </a>
+            <a href="https://www.linkedin.com/in/shirley-wang-37b7457b/" className="social-icons__link">
                 <i className="fab fa-linkedin-in fa-2x"></i>
-            </Link>
-            <Link to="https://codepen.io/blenderWang" className="social-icons__link">
+            </a>
+            <a href="https://codepen.io/blenderWang" className="social-icons__link">
                 <i className="fab fa-codepen fa-2x"></i>
-            </Link>
+            </a>
         </div>
     );
 }

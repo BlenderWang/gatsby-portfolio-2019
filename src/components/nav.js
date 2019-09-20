@@ -11,10 +11,10 @@ const Nav = ({ siteTitle }) => (
 
         <ul id="menu">
             <li className='home-section'><Link to='/'>Home</Link></li>
-            <li className='about-section'><Link to='#about'>About Me</Link></li>
-            <li className='skills-section'><Link to='/skills'>Skills</Link></li>
-            <li className='portfolio-section'><Link to='/portfolio'>Portfolio</Link></li>
-            <li className='contact-section'><Link to='/contact'>Contact Me</Link></li>
+            <li className='about-section'><Link to='/#about'>About Me</Link></li>
+            <li className='skills-section'><Link to='/page-skills'>Skills</Link></li>
+            <li className='portfolio-section'><Link to='/page-portfolio'>Portfolio</Link></li>
+            <li className='contact-section'><Link to='/page-contact'>Contact Me</Link></li>
         </ul>
     </div>
 )

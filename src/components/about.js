@@ -13,7 +13,7 @@ const About = () => {
             <br/>
             <br/>
             Meanwhile the fast development of the web have intrigued me and let me into the co-existing world of <em>Front-End</em> Development where I can further grow and improve as a <em>designer</em> as well as being a <em>developer</em>. One thing I have to state clearly is that I am neither a genius in graphics nor a coding wizard. Instead I have the <em>curiosity</em> for obtaining knowledge and the persistency for <em>improving</em> my skills.</p>
-            <Link className="btn btn-dark" to="/skills">What Are My Skills</Link>
+            <Link className="btn btn-dark" to="/page-skills">What Are My Skills</Link>
         </div>
     );
 }
