@@ -6,11 +6,22 @@
         ". title title . " auto
         ". image desc . " auto
         ". btn btn ." auto /
-        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;;
+        auto minmax(100px, 300px) minmax(250px, 450px) auto;
     grid-gap: 2em 5em;
     justify-items: center;
     align-content: center;
     margin: 2.3em;
+
+    @media (max-width: 460px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            margin: 2em 0;
+        }
+    }
 
     .section-title {
         grid-area: title;

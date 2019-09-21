@@ -6,8 +6,8 @@ import './nav.scss';
 const Nav = ({ siteTitle }) => (
     <div className="nav">
         <input type="checkbox" name="" id="menu-toggle"></input>
-        <label for="menu-toggle" id="trigger"></label>
-        <label for="menu-toggle" id="burger"></label>
+        <label htmlFor="menu-toggle" id="trigger"></label>
+        <label htmlFor="menu-toggle" id="burger"></label>
 
         <ul id="menu">
             <li className='home-section'><Link to='/'>Home</Link></li>

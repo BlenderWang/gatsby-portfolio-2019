@@ -6,9 +6,9 @@ import './about.scss';
 
 const About = () => {
     return (
-        <div id="about" class="bg-light">
+        <div id="about" className="bg-light">
             <h2 className="section-title">About Me</h2>
-            <img src={myPic} alt="It is me!" class="my-pic" />
+            <img src={myPic} alt="It is me!" className="my-pic" />
             <p className="about__paragraph">Hi! <em>Shirley Wang</em> here. I am so glad that you are interested in who I am and what I have achieved. I was majored in economics and literature back in the university. I've always been drawn to stories, fantasies and mythologies and etc, which leads me to have skills in <em>graphics</em> and <em>animation</em> as well as to the decision of moving to Sweden, one of the European countries that are filled with amazing stories.
             <br/>
             <br/>

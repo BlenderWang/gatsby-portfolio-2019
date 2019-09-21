@@ -6,8 +6,8 @@ import NauticalLogo from "./nauticalLogo"
 import './header.scss';
 
 const Header = () => {
-    return(
-      <header id="header">
+  return(
+    <header id="header">
         <div className="container">
             <NauticalLogo />
             <img className="header-img" src={headerImg} alt="SVG header" />
