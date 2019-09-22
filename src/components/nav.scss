@@ -3,6 +3,7 @@
 .nav {
     #trigger, #burger {
         position: fixed;
+        z-index: 10000;
     }
 
     #burger::before, #burger::after {
@@ -16,7 +17,7 @@
         width: 38px;
         height: 5px;
         cursor: pointer;
-        z-index: 100;
+        // z-index: 10000;
         transition: .3s ease-in-out;
     }
 
@@ -79,6 +80,7 @@
         border-bottom-left-radius: 100%;
         box-shadow: 3px 1px 5px 1px darken($white, 30%);
         transition: .2s;
+        z-index: 1000;
     }
 
     #menu-toggle:checked ~ #menu {

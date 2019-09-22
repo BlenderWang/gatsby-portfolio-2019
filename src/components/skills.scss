@@ -8,7 +8,6 @@
         width: 100%;
         min-height: 100vh;
         background: $primary;
-        z-index: -2;
         display: grid;
         grid:
             ". heading heading ." auto
@@ -21,11 +20,10 @@
 
         .skills-img {
             position: absolute;
-            top: -1em;
-            right: 2.2em;
+            top: -2em;
+            left: -0.8em;
             width: 26%;
-            transform: rotate(30deg);
-            z-index: -1;
+            transform: rotate(-30deg);
         }
 
         .skills__heading {
@@ -42,6 +40,7 @@
 
         .section-desc {
             color: $gray-900;
+            z-index: 100;
         }
 
         .skills__item {
@@ -60,14 +59,49 @@
             grid-area: item2;
         }
 
-        // .folder {
-        //     &:hover {
-        //         cursor: pointer;
-        //     }
-        //     #{&}__caption {
-        //         color: darken($primary, 20%);
-        //     }
-        // }
+        .folder__icon {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            position: relative;
+            transform: scale(1, 1) translate3d(0, 0, 0);
+            @include transition-ease;
+
+            .fa-icons {
+                display: block;
+                color: lighten($primary, 5%);
+                width: 18%;
+                height: auto;
+                position: relative;
+            }
+
+            .fa-code {
+                top: 350%;
+            }
+
+            .fa-image {
+                top: 300%;
+            }
+
+            &:hover {
+                transform: scale(.8, .8) translate3d(0, 0, 0);
+            }
+
+            .st0 {
+                fill: darken($primary, 15%);
+            }
+
+            .st1 {
+                fill: darken($primary, 10%);
+                cursor: pointer;
+            }
+        }
+
+        .folder__caption {
+            color: darken($primary, 20%);
+            text-align: start;
+        }
 
         .btn {
             grid-area: btn;
