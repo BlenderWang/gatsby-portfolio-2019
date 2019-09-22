@@ -1,16 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Nav from "../components/nav"
-import Image from '../components/image'
+import Skills from "../components/skills"
 
 const SkillsPage = () => (
   <Layout>
     <Nav/>
-    <div style={{ width: 300 }} >
-      <Image />
-    </div>
+    <Skills />
   </Layout>
 )
 

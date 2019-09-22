@@ -1,0 +1,76 @@
+@import './layout.scss';
+
+#skills {
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: $primary;
+        z-index: -2;
+        display: grid;
+        grid:
+            ". heading heading ." auto
+            ". item1 item2 ." auto
+            ". btn btn ." /
+            5em 1fr 1fr 5em;
+        justify-items: center;
+        align-content: space-around;
+        grid-gap: 2em;
+
+        .skills-img {
+            position: absolute;
+            top: -1em;
+            right: 2.2em;
+            width: 26%;
+            transform: rotate(30deg);
+            z-index: -1;
+        }
+
+        .skills__heading {
+            grid-area: heading;
+            display: grid;
+            grid-gap: 4.2em;
+            width: 80%;
+            justify-content: center;
+        }
+
+        .section-title {
+            color: $secondary;
+        }
+
+        .section-desc {
+            color: $gray-900;
+        }
+
+        .skills__item {
+            width: 35%;
+
+            .folder__thumb {
+                width: 25%;
+            }
+        }
+
+        .skills__item--1 {
+            grid-area: item1;
+        }
+
+        .skills__item--2 {
+            grid-area: item2;
+        }
+
+        // .folder {
+        //     &:hover {
+        //         cursor: pointer;
+        //     }
+        //     #{&}__caption {
+        //         color: darken($primary, 20%);
+        //     }
+        // }
+
+        .btn {
+            grid-area: btn;
+        }
+    }
+}
