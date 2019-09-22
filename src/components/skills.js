@@ -6,6 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import file01 from "../images/file_1.svg"
 import file02 from "../images/file_2.svg"
 import file03 from "../images/file_3.svg"
+import file04 from "../images/file_4.svg"
+import file05 from "../images/file_5.svg"
+import file06 from "../images/file_6.svg"
+import file07 from "../images/file_7.svg"
+import file08 from "../images/file_8.svg"
+import file09 from "../images/file_9.svg"
+import file10 from "../images/file_10.svg"
+import file11 from "../images/file_11.svg"
+import file12 from "../images/file_12.svg"
 import './skills.scss';
 
 const Skills = () => {
@@ -28,6 +37,9 @@ const Skills = () => {
                             <img src={file01} alt="HTML skills" className="folder__thumb"/>
                             <img src={file02} alt="CSS skills" className="folder__thumb"/>
                             <img src={file03} alt="JS skills" className="folder__thumb"/>
+                            <img src={file04} alt="NodeJS skills" className="folder__thumb"/>
+                            <img src={file05} alt="PHP skills" className="folder__thumb"/>
+                            <img src={file06} alt="MySQL skills" className="folder__thumb"/>
                         </div>
                         <div className="folder__icon">
                             <FontAwesomeIcon icon={['fas', 'code']} className="fa-icons fa-code" />
@@ -47,9 +59,12 @@ const Skills = () => {
                     <div className="folder">
                         <div className="folder__feedback"></div>
                         <div className="folder__preview folder__preview--thumb">
-                            <img src={file01} alt="HTML skills" className="folder__thumb"/>
-                            <img src={file02} alt="CSS skills" className="folder__thumb"/>
-                            <img src={file03} alt="JS skills" className="folder__thumb"/>
+                            <img src={file07} alt="Inkscape skills" className="folder__thumb"/>
+                            <img src={file08} alt="Gimp skills" className="folder__thumb"/>
+                            <img src={file09} alt="Blender skills" className="folder__thumb"/>
+                            <img src={file10} alt="After Effect skills" className="folder__thumb"/>
+                            <img src={file11} alt="Illustrator skills" className="folder__thumb"/>
+                            <img src={file12} alt="Photoshop skills" className="folder__thumb"/>
                         </div>
                         <div className="folder__icon">
                             <FontAwesomeIcon icon={['fas', 'image']} className="fa-icons fa-image" />

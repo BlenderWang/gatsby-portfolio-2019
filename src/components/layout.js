@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import Social from "./social"
 import "./layout.scss"
@@ -25,6 +26,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          {
+            name: 'description',
+            content: 'This is a test'
+          },
+          {
+            name: 'keywords',
+            content: 'gatsby, react, portfolio'
+          },
+        ]}
+      />
       <div
         style={{
           margin: `0 auto`,
