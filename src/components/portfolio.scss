@@ -1,0 +1,62 @@
+@import './layout.scss';
+
+#portfolio {
+    .container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: $white;
+        display: grid;
+        grid:
+            ". heading ." auto
+            ". content ."  /
+            5em 1fr 5em;
+        justify-items: center;
+        align-content: space-around;
+
+        .portfolio__heading {
+            grid-area: heading;
+            display: grid;
+            grid-gap: 2.2em;
+            width: 100%;
+            justify-content: center;
+
+            .section-title {
+                color: $primary;
+                margin-top: 2em;
+            }
+
+            .section-desc {
+                border-left: 2px solid $secondary;
+                padding: 20px;
+            }
+        }
+
+        .portfolio__content {
+            grid-area: content;
+            margin: 3.7em auto;
+        }
+
+        .project {
+            position: relative;
+            margin: 1.8em auto 5.2em auto;
+            width: 85%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 2em;
+            border-radius: 5em;
+            background: $gray-200;
+            box-shadow: 10px 10px 23px 0 $gray-500;
+        }
+
+        .project__screenshot {
+            position: relative;
+            left: 30px;
+            top: -75px;
+            width: auto;
+            height: 32em;
+            overflow: hidden;
+        }
+    }
+}
