@@ -46,9 +46,9 @@
         .skills__item {
             width: 35%;
 
-            .folder__thumb {
-                width: 25%;
-            }
+            // .folder__thumb {
+            //     width: 25%;
+            // }
         }
 
         .skills__item--1 {
@@ -57,6 +57,43 @@
 
         .skills__item--2 {
             grid-area: item2;
+        }
+
+        .folder {
+            position: relative;
+            z-index: 200;
+        }
+
+        .folder__feedback {
+            position: absolute;
+            width: $folder-width;
+            height: $folder-width;
+            border-radius: 50%;
+            background: darken($primary, 18%);
+            top: 50%;
+            left: 50%;
+            margin: calc(#{$folder-width} / -2 + #{$folder-slip-height} / 2) 0 0 calc(#{$folder-width} / -2);
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .folder__preview {
+            position: absolute;
+        }
+
+        .folder__preview--thumb {
+            width: #{$thumb-width};
+            height: #{$thumb-width};
+            top: calc((#{$folder-height} + #{$folder-slip-height}) / 2 - #{$thumb-width} / 2);
+            left: calc(#{$folder-width} / 2 - #{$thumb-width} / 2);
+        }
+
+        .folder__thumb {
+            max-width: 100%;
+            width: 25%;
+            display: block;
+            position: absolute;
+            opacity: 0;
         }
 
         .folder__icon {
@@ -97,6 +134,7 @@
                 cursor: pointer;
             }
         }
+
         .folder__caption {
             color: darken($primary, 20%);
             text-align: start;

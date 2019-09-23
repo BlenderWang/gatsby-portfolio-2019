@@ -14,6 +14,15 @@ $black: #0d0d0d !default;
 $primary: #1D809F !default;
 $secondary: #ecb807 !default;
 
+$folder-width: 20em;
+$folder-height: calc(0.8 * #{#{$folder-width}});
+$folder-deco-width: calc(#{$folder-width} / 3.5);
+$folder-cover-height: calc(0.7 * #{$folder-width});
+$folder-slip-height: calc(#{$folder-height} - #{$folder-cover-height});
+$folder-border-radius: calc(#{$folder-width} / 10);
+$folder-title-size: calc(0.16 * #{$folder-width});
+$thumb-width: calc(0.6 * #{$folder-width});
+
 @mixin transition-ease {
     transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
