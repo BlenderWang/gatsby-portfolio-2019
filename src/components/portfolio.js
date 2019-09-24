@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PortfolioFolder from './projectFolder'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './portfolio.scss'
+import { Link } from 'gatsby'
 
 const projects = [{
     id: "0",
@@ -40,6 +42,15 @@ export default class Portfolio extends Component {
                     </div>
 
                     <PortfolioFolder projects={projects} />
+
+                    <div className="slider__controls">
+                        <Link to="/#" className="slider__arrow slider__arrow_prev">
+                            <FontAwesomeIcon icon={['fas', 'caret-left']} className="fa-icons fa-prev" />
+                        </Link>
+                        <Link to="/#" className="slider__arrow slider__arrow_next">
+                            <FontAwesomeIcon icon={['fas', 'caret-right']} className="fa-icons fa-next" />
+                        </Link>
+                    </div>
                 </div>
             </section>
         )

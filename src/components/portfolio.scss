@@ -55,6 +55,7 @@
                 grid-template-columns: 1fr;
                 margin: initial;
                 width: 100%;
+                margin-bottom: 1em;
             }
         }
 
@@ -116,6 +117,7 @@
                     "demo"
                     "repo";
                 grid-gap: 1em;
+                margin-bottom: 1.6em;
             }
 
             .project--title {
@@ -140,6 +142,44 @@
                     width: 50%;
                 }
             }
+        }
+
+        .slider__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY( -50% );
+            transition: 0.2s;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            .fa-icons {
+                width: 64px;
+                height: 64px;
+                display: block;
+                position: relative;
+
+                path {
+                    fill: $gray-800;
+                }
+            }
+        }
+
+        .slider__arrow_prev, .slider__arrow_next {
+            width: 64px;
+            height: 64px;
+        }
+
+        .slider__arrow_prev {
+            left: 16px;
+        }
+
+        .slider__arrow_next {
+            right: 16px;
         }
     }
 }
