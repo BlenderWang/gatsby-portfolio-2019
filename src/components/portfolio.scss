@@ -1,11 +1,13 @@
 @import './layout.scss';
 
 #portfolio {
+    overflow: hidden;
+
     .container {
         position: relative;
         width: 100%;
         min-height: 100vh;
-        background: $white;
+        background: transparent;
         display: grid;
         grid:
             ". heading ." auto
@@ -39,24 +41,105 @@
 
         .project {
             position: relative;
-            margin: 1.8em auto 5.2em auto;
+            margin: 8% auto 18% auto;
             width: 85%;
             height: auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-gap: 2em;
-            border-radius: 5em;
-            background: $gray-200;
-            box-shadow: 10px 10px 23px 0 $gray-500;
+            border-radius: 1em;
+            // border: 1px solid $gray-500;
+            background: $white;
+
+            @media (max-width: 650px) {
+                grid-template-columns: 1fr;
+                margin: initial;
+                width: 100%;
+            }
+        }
+
+        .project-demo {
+            position: relative;
+
+            &::before, &::after {
+                position: absolute;
+                z-index: -1;
+                content: "";
+                bottom: 10px;
+                left: 10px;
+                width: 50%;
+                top: 80%;
+                max-width: 100%;
+                background: $gray-400;
+                box-shadow: 0 15px 10px $gray-400;
+                transform: rotate(-3deg);
+            }
+
+            &::after {
+                transform: rotate(3deg);
+                right: 10px;
+                left: auto;
+            }
         }
 
         .project__screenshot {
             position: relative;
-            left: 30px;
-            top: -75px;
+            left: 10px;
+            top: -5.5em;
             width: auto;
             height: 32em;
             overflow: hidden;
+
+            @media (max-width: 650px) {
+                width: 100%;
+                height: auto;
+                top: initial;
+                left: initial;
+            }
+        }
+
+        .project__details {
+            display: grid;
+            grid-template-areas:
+                "project-title project-title project-title"
+                "project-desc project-desc project-desc"
+                "demo . repo";
+            align-content: space-around;
+            justify-items: center;
+            margin: 0 10px;
+
+            @media (max-width: 650px) {
+                margin: initial;
+                grid-template-areas:
+                    "project-title"
+                    "project-desc"
+                    "demo"
+                    "repo";
+                grid-gap: 1em;
+            }
+
+            .project--title {
+                color: $gray-800;
+                grid-area: project-title;
+            }
+
+            .project--desc {
+                grid-area: project-desc;
+            }
+
+            .linkDemo {
+                grid-area: demo;
+            }
+
+            .linkRepo {
+                grid-area: repo;
+            }
+
+            @media (max-width: 650px) {
+                .linkDemo, .linkRepo {
+                    width: 50%;
+                }
+            }
         }
     }
 }

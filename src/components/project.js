@@ -5,13 +5,13 @@ export default class project extends Component {
     render() {
         const project = this.props.project
         return (
-            <div className="project">
+            <div className={["project" , "project-demo"].join(' ')}>
                 <img className="project__screenshot" src={project.imageLink} alt={project.title} />
                 <div className="project__details">
                     <h4 className="project--title">{project.title}</h4>
                     <p className="project--desc">{project.description}</p>
-                    <button className="codepenDemo">View Demo</button>
-                    <button className="githubRepo">View Code</button>
+                    <a className="linkDemo btn btn-dark">View Demo</a>
+                    <a className="linkRepo btn btn-dark">View Code</a>
                 </div>
             </div>
         )
