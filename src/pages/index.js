@@ -1,4 +1,5 @@
 import React from "react"
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Layout from "../components/layout"
 import Header from "../components/header"
 import Nav from "../components/nav"
@@ -9,11 +10,27 @@ import { fab }  from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 
 const IndexPage = () => (
-  <Layout>
-    <Header />
-    <Nav />
-    <About />
-  </Layout>
+  <PageTransition
+    defaultStyle={{
+      transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+      left: '100%',
+      position: 'absolute',
+      width: '100%',
+      opacity: '0',
+    }}
+    transitionStyles={{
+      entering: { left: '0%', opacity: '.95' },
+      entered: { left: '0%', opacity: '1' },
+      exiting: { left: '100%' },
+    }}
+    transitionTime={500}
+  >
+    <Layout>
+      <Header />
+      <Nav />
+      <About />
+    </Layout>
+  </PageTransition>
 )
 
 export default IndexPage

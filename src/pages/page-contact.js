@@ -1,16 +1,16 @@
 import React from "react"
-import PageTransition from 'gatsby-plugin-page-transitions';
-
+import PageTransition from 'gatsby-plugin-page-transitions'
 import Layout from "../components/layout"
 import Nav from "../components/nav"
-import Portfolio from "../components/portfolio"
-
+import Contact from "../components/contact"
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas }  from '@fortawesome/free-solid-svg-icons'
+import { fab }  from '@fortawesome/free-brands-svg-icons'
 
-library.add(fas)
+library.add(fab)
 
-const SkillsPage = () => (
+const ContactPage = () => (
+        <Layout>
+            <Nav />
     <PageTransition
         defaultStyle={{
         transition: 'top 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
@@ -26,11 +26,9 @@ const SkillsPage = () => (
       }}
       transitionTime={500}
     >
-        <Layout>
-            <Nav/>
-            <Portfolio />
-        </Layout>
+            <Contact />
   </PageTransition>
+        </Layout>
 )
 
-export default SkillsPage
+export default ContactPage

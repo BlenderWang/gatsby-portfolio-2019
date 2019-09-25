@@ -1,0 +1,11 @@
+@import './layout.scss';
+
+#contact {
+    min-height: calc(100vh - 3.5rem);
+
+    .container {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+    }
+}
