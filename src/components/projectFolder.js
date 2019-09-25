@@ -6,9 +6,9 @@ class ProjectFolder extends Component {
     render() {
 
         return (
-            <div className="portfolio__content">
-                {this.props.projects.map(project => <Project key={project.id} project={project} />)}
-            </div>
+            <ul className="portfolio__content">
+                {this.props.projects.map((project, i) => <Project key={i} project={project} />)}
+            </ul>
         )
     }
 }

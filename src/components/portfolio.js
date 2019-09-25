@@ -2,34 +2,66 @@ import React, { Component } from 'react'
 import PortfolioFolder from './projectFolder'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './portfolio.scss'
-import { Link } from 'gatsby'
+// import project from './project'
 
 const projects = [{
     id: "0",
-    title: "project 01",
-    description: "my latest group project bla bla bla",
-    imageLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1568642331/Gatsby-Portfolio/skills-img.svg",
+    title: "The White Strips --- A Tribute Site",
+    description: "my latest group project and perhaps the most succssful school project",
+    imageLink: "../../static/img/school-project-01.jpg",
     repoLink: "",
     demoLink: ""
     }, {
         id: "1",
-        title: "project 02",
-        description: "e-commerce amazon inspired nodejs project. My reflection: such experience such wow!",
-        imageLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1568642368/Gatsby-Portfolio/header-img.svg",
+        title: "A template website --- A freelance project",
+        description: "A simple website done with HTML, CSS and JavaScript",
+        imageLink: "../../static/img/carlos-website-template.jpg",
         repoLink: "",
         demoLink: ""
     }, {
         id: "2",
-        title: "project 03",
+        title: "Flex vs Grid",
         description: "my favorite school project done by only HTML and CSS in such psychodelic color scheme",
-        imageLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1568642332/Gatsby-Portfolio/myLogoDark.svg",
+        imageLink: "../../static/img/school-project-02.jpg",
+        repoLink: "",
+        demoLink: ""
+    }, {
+        id: "3",
+        title: "Working with API --- build a simple TV search site",
+        description: "a very much simplified IMDB inspired side project",
+        imageLink: "../../static/img/mini-search.jpg",
         repoLink: "",
         demoLink: ""
     }
 ]
 
 export default class Portfolio extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            // folders: projects.folders,
+            // folder: projects.folders[0]
+        }
+    }
+
+    nextSlide = () => {
+        // const newIndex = this.state.folder.index+1
+        // this.setState({
+        //     folder: projects.folders[newIndex]
+        // })
+    }
+
+    prevSlide = () => {
+        // const newIndex = this.state.folder.index-1
+        // this.setState({
+        //     folder: projects.folders[newIndex]
+        // })
+    }
+
     render() {
+        // const { folder } = this.state
+
         return (
             <section id="portfolio" className="portfolio">
                 <div className="container">
@@ -44,12 +76,12 @@ export default class Portfolio extends Component {
                     <PortfolioFolder projects={projects} />
 
                     <div className="slider__controls">
-                        <Link to="/#" className="slider__arrow slider__arrow_prev">
+                        <button className="slider__arrow slider__arrow_prev" onClick={() => this.prevSlide()} >
                             <FontAwesomeIcon icon={['fas', 'caret-left']} className="fa-icons fa-prev" />
-                        </Link>
-                        <Link to="/#" className="slider__arrow slider__arrow_next">
+                        </button>
+                        <button className="slider__arrow slider__arrow_next" onClick={() => this.nextSlide()} >
                             <FontAwesomeIcon icon={['fas', 'caret-right']} className="fa-icons fa-next" />
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </section>
