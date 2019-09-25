@@ -1,21 +1,60 @@
 import React from "react"
 import { Link } from "gatsby"
+import FolderPreviews from "./folderPreviews"
+import FolderIcon from "./folderIcon"
 import skillsImg from "../images/skills-img.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import file01 from "../images/file_1.svg"
-import file02 from "../images/file_2.svg"
-import file03 from "../images/file_3.svg"
-import file04 from "../images/file_4.svg"
-import file05 from "../images/file_5.svg"
-import file06 from "../images/file_6.svg"
-import file07 from "../images/file_7.svg"
-import file08 from "../images/file_8.svg"
-import file09 from "../images/file_9.svg"
-import file10 from "../images/file_10.svg"
-import file11 from "../images/file_11.svg"
-import file12 from "../images/file_12.svg"
 import './skills.scss';
+
+const files = [{
+    id: "0",
+    fileLink: "../../static/img/file_1.svg",
+    description: "HTML skills"
+}, {
+    id: "1",
+    fileLink: "../../static/img/file_2.svg",
+    description: "CSS skills"
+}, {
+    id: "2",
+    fileLink: "../../static/img/file_3.svg",
+    description: "JavaScript skills"
+}, {
+    id: "3",
+    fileLink: "../../static/img/file_4.svg",
+    description: "NodeJS skills"
+}, {
+    id: "4",
+    fileLink: "../../static/img/file_5.svg",
+    description: "PHP"
+}, {
+    id: "5",
+    fileLink: "../../static/img/file_6.svg",
+    description: "MySql skills"
+}, {
+    id: "6",
+    fileLink: "../../static/img/file_7.svg",
+    description: "Inkscape skills"
+}, {
+    id: "7",
+    fileLink: "../../static/img/file_8.svg",
+    description: "Gimp skills"
+}, {
+    id: "8",
+    fileLink: "../../static/img/file_9.svg",
+    description: "Blender skills"
+}, {
+    id: "9",
+    fileLink: "../../static/img/file_10.svg",
+    description: "After Effect skills"
+}, {
+    id: "10",
+    fileLink: "../../static/img/file_11.svg",
+    description: "Illustrator skills"
+}, {
+    id: "11",
+    fileLink: "../../static/img/file_12.svg",
+    description: "Photoshop skills"
+}]
 
 const Skills = () => {
     return(
@@ -26,30 +65,19 @@ const Skills = () => {
                 <div className="skills__heading">
                     <h2 className="section-title">Skills</h2>
                     <p className="section-desc">
-                        <em>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe quae voluptate dicta quas possimus magnam neque dolorem! Praesentium rerum eligendi architecto? Minus sapiente cupiditate eos omnis, ipsam aut nihil? Eveniet!</em>
+                        I'd like to divide my skills into two categories: programming and graphics as presented down below.The numbers are simply my personal evaluation on the subject.
+                        <br />
+                        In the scale of 1 to 10, <em>1 = minimium capacity </em> while <em>10 = maxmium capacity </em>
                     </p>
                 </div>
 
                 <div className="skills__item skills__item--1">
                     <div className="folder">
                         <div className="folder__feedback"></div>
-                        <div className="folder__preview folder__preview--thumb">
-                            <img src={file01} alt="HTML skills" className="folder__thumb"/>
-                            <img src={file02} alt="CSS skills" className="folder__thumb"/>
-                            <img src={file03} alt="JS skills" className="folder__thumb"/>
-                            <img src={file04} alt="NodeJS skills" className="folder__thumb"/>
-                            <img src={file05} alt="PHP skills" className="folder__thumb"/>
-                            <img src={file06} alt="MySQL skills" className="folder__thumb"/>
-                        </div>
+                        <FolderPreviews files={files} />
                         <div className="folder__icon">
                             <FontAwesomeIcon icon={['fas', 'code']} className="fa-icons fa-code" />
-                            <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 20 16">
-                                <g>
-                                    <path className="st0" d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2
-                                        c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/>
-                                    <path className="st1" d="M0,2l18,0c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2L0,2z"/>
-                                </g>
-                            </svg>
+                            <FolderIcon />
                         </div>
                         <h3 className="folder__caption">Programming</h3>
                     </div>
@@ -58,23 +86,10 @@ const Skills = () => {
                 <div className="skills__item skills__item--2">
                     <div className="folder">
                         <div className="folder__feedback"></div>
-                        <div className="folder__preview folder__preview--thumb">
-                            <img src={file07} alt="Inkscape skills" className="folder__thumb"/>
-                            <img src={file08} alt="Gimp skills" className="folder__thumb"/>
-                            <img src={file09} alt="Blender skills" className="folder__thumb"/>
-                            <img src={file10} alt="After Effect skills" className="folder__thumb"/>
-                            <img src={file11} alt="Illustrator skills" className="folder__thumb"/>
-                            <img src={file12} alt="Photoshop skills" className="folder__thumb"/>
-                        </div>
+                        <FolderPreviews files={files} />
                         <div className="folder__icon">
                             <FontAwesomeIcon icon={['fas', 'image']} className="fa-icons fa-image" />
-                            <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 20 16">
-                                <g>
-                                    <path className="st0" d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2
-                                        c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/>
-                                    <path className="st1" d="M0,2l18,0c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2L0,2z"/>
-                                </g>
-                            </svg>
+                            <FolderIcon />
                         </div>
                         <h3 className="folder__caption">Graphics</h3>
                     </div>

@@ -17,6 +17,7 @@
         justify-items: center;
         align-content: space-around;
         grid-gap: 2em;
+        clip-path: polygon(100% 0, 100% 84%, 65% 100%, 25% 94%, 0 67%, 0 0);
 
         .skills-img {
             position: absolute;
@@ -41,6 +42,15 @@
         .section-desc {
             color: $gray-900;
             z-index: 100;
+            width: 65%;
+            margin: 0 auto;
+            padding: 0 20px;
+            border-left: 2px solid $secondary;
+
+            em {
+                color: $secondary;
+                font-weight: 700;
+            }
         }
 
         .skills__item {
