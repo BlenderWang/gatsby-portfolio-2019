@@ -71,14 +71,18 @@
 
         .project {
             position: relative;
-            margin: 8% auto 18% auto;
+            margin: 8% auto 16% auto;
             width: 95%;
             height: auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-gap: 2em;
-            border-radius: 1em;
-            background: $white;
+            border-radius: 3px;
+            background: #fff;
+
+            &:nth-child(5) {
+                margin-bottom: 7%;
+            }
 
             @media (max-width: 650px) {
                 grid-template-columns: 1fr;
@@ -119,6 +123,7 @@
             width: 100%;
             height: auto;
             overflow: hidden;
+            box-shadow: 8px 15px 10px $gray-200;
 
             @media (max-width: 650px) {
                 width: 100%;
@@ -146,6 +151,8 @@
                     "demo"
                     "repo";
                 grid-gap: 1em;
+                margin-left: 1em;
+                margin-right: 1em;
                 margin-bottom: 1.6em;
             }
 
@@ -156,6 +163,7 @@
 
             .project--desc {
                 grid-area: project-desc;
+                text-transform: capitalize;
             }
 
             .linkDemo {

@@ -1,11 +1,39 @@
 @import './layout.scss';
 
 #contact {
-    min-height: calc(100vh - 3.5rem);
+    overflow: hidden;
 
     .container {
+        min-height: calc(100vh - 3.5rem);
         display: grid;
         justify-items: center;
         align-content: center;
+        grid-gap: 3em;
+        background: linear-gradient(134deg, $secondary 32%, $white 32%), linear-gradient(110deg, $white 72%, $secondary 83%);
+    }
+
+    .email-address {
+        font-style: italic;
+        font-size: 3em;
+        font-weight: 900;
+
+        a {
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .container {
+            background: linear-gradient(108deg, $secondary 32%, $white 32%), linear-gradient(110deg, $white 72%, $secondary 83%);
+        }
+
+        .email-address {
+            font-size: 140%;
+        }
+
+        .section-desc {
+            margin: 0 1.2em;
+        }
     }
 }

@@ -12,16 +12,16 @@ library.add(fab)
 const IndexPage = () => (
   <PageTransition
     defaultStyle={{
-      transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
-      left: '100%',
+      transition: 'right 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+      right: '100%',
       position: 'absolute',
       width: '100%',
       opacity: '0',
     }}
     transitionStyles={{
-      entering: { left: '0%', opacity: '.95' },
-      entered: { left: '0%', opacity: '1' },
-      exiting: { left: '100%' },
+      entering: { right: '0%', opacity: '.95' },
+      entered: { right: '0%', opacity: '1' },
+      exiting: { right: '100%' },
     }}
     transitionTime={500}
   >

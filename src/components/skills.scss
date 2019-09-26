@@ -74,6 +74,11 @@
             z-index: 200;
         }
 
+        .folder:hover .folder__preview--thumb {
+            opacity: 1;
+            transform: translate(50%, 50%) scale(1);
+        }
+
         .folder__feedback {
             position: absolute;
             width: $folder-width;
@@ -101,9 +106,13 @@
         .folder__thumb {
             max-width: 100%;
             width: 25%;
-            display: block;
-            position: absolute;
+            display: inline-block;
+            // position: absolute;
             opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
         }
 
         .folder__icon {

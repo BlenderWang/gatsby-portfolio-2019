@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { Link } from "gatsby"
 import FolderPreviews from "./folderPreviews"
 import FolderIcon from "./folderIcon"
@@ -56,48 +56,69 @@ const files = [{
     description: "Photoshop skills"
 }]
 
-const Skills = () => {
-    return(
-        <section id="skills" className="bg-primary">
-            <div className="container">
-                <img className="skills-img" src={skillsImg} alt="SVG laptop" />
+class Skills extends Component {
+    constructor() {
+        super()
 
-                <div className="skills__heading">
-                    <h2 className="section-title">Skills</h2>
-                    <p className="section-desc">
-                        I'd like to divide my skills into two categories: programming and graphics as presented down below.The numbers are simply my personal evaluation on the subject.
-                        <br />
-                        In the scale of 1 to 10, <em>1 = minimium capacity </em> while <em>10 = maxmium capacity </em>
-                    </p>
-                </div>
+        this.state = {
+            visible: false,
+        }
 
-                <div className="skills__item skills__item--1">
-                    <div className="folder">
-                        <div className="folder__feedback"></div>
-                        <FolderPreviews files={files} />
-                        <div className="folder__icon">
-                            <FontAwesomeIcon icon={['fas', 'code']} className="fa-icons fa-code" />
-                            <FolderIcon />
-                        </div>
-                        <h3 className="folder__caption">Programming</h3>
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(event) {
+        console.log('click');
+        event.preventDefault()
+        this.setState({
+            visible: !this.state.visible,
+        });
+    }
+
+    render() {
+        // const showVisible = this.state.visible ? 'active' : ''
+        return(
+            <section id="skills" className="bg-primary">
+                <div className="container">
+                    <img className="skills-img" src={skillsImg} alt="SVG laptop" />
+
+                    <div className="skills__heading">
+                        <h2 className="section-title">Skills</h2>
+                        <p className="section-desc">
+                            I'd like to divide my skills into two categories: programming and graphics as presented down below.The numbers are simply my personal evaluation on the subject.
+                            <br />
+                            In the scale of 1 to 10, <em>1 = minimium capacity </em> while <em>10 = maxmium capacity </em>
+                        </p>
                     </div>
-                </div>
 
-                <div className="skills__item skills__item--2">
-                    <div className="folder">
-                        <div className="folder__feedback"></div>
-                        <FolderPreviews files={files} />
-                        <div className="folder__icon">
-                            <FontAwesomeIcon icon={['fas', 'image']} className="fa-icons fa-image" />
-                            <FolderIcon />
+                    <div className="skills__item skills__item--1">
+                        <div className="folder">
+                            <div className="folder__feedback"></div>
+                            <FolderPreviews files={files} />
+                            <div className="folder__icon" onClick={this.handleClick}>
+                                <FontAwesomeIcon icon={['fas', 'code']} className="fa-icons fa-code" />
+                                <FolderIcon />
+                            </div>
+                            <h3 className="folder__caption">Programming</h3>
                         </div>
-                        <h3 className="folder__caption">Graphics</h3>
                     </div>
+
+                    <div className="skills__item skills__item--2">
+                        <div className="folder">
+                            <div className="folder__feedback"></div>
+                            <FolderPreviews files={files} />
+                            <div className="folder__icon" onClick={this.handleClick}>
+                                <FontAwesomeIcon icon={['fas', 'image']} className="fa-icons fa-image" />
+                                <FolderIcon />
+                            </div>
+                            <h3 className="folder__caption">Graphics</h3>
+                        </div>
+                    </div>
+                    <Link className="btn btn-dark" to="/page-portfolio">Check out my Portfolio</Link>
                 </div>
-                <Link className="btn btn-dark" to="/page-portfolio">Check out my Portfolio</Link>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    }
 }
 
 export default Skills

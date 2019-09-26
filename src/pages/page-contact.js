@@ -9,26 +9,26 @@ import { fab }  from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 
 const ContactPage = () => (
-        <Layout>
-            <Nav />
     <PageTransition
         defaultStyle={{
-        transition: 'top 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
-        top: '100%',
-        position: 'absolute',
-        height: '100%',
-        opacity: '0',
-      }}
-      transitionStyles={{
-        entering: { top: '0%', opacity: '1' },
-        entered: { top: '0%', opacity: '1' },
-        exiting: { top: '100%' },
-      }}
-      transitionTime={500}
+            transition: 'right 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+            right: '100%',
+            position: 'absolute',
+            width: '100%',
+            opacity: '0',
+        }}
+        transitionStyles={{
+            entering: { right: '0%', opacity: '.95' },
+            entered: { right: '0%', opacity: '1' },
+            exiting: { right: '100%' },
+        }}
+        transitionTime={500}
     >
+        <Layout>
+            <Nav />
             <Contact />
-  </PageTransition>
         </Layout>
+    </PageTransition>
 )
 
 export default ContactPage
