@@ -1,5 +1,4 @@
 import React from "react"
-// import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import headerImg from "../images/header-img.svg"
 import NauticalLogo from "./nauticalLogo"
@@ -20,13 +19,5 @@ const Header = () => {
         </header>
     )
 }
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.default = {
-//   siteTitle: ``,
-// }
 
 export default Header

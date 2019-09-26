@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         meta={[
           {
             name: 'description',
-            content: 'This is a test'
+            content: 'My 2019 Portfolio made with Gatsby. First try.'
           },
           {
             name: 'keywords',

@@ -7,7 +7,6 @@ import Skills from "../components/skills"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas }  from '@fortawesome/free-solid-svg-icons'
-// import { fab }  from '@fortawesome/free-brands-svg-icons'
 
 library.add(fas)
 
@@ -27,10 +26,15 @@ const SkillsPage = () => (
     }}
     transitionTime={500}
   >
-    <Layout>
+    <div
+      style={{
+          margin: `0 auto`,
+          maxWidth: `100vw`,
+          paddingTop: 0,
+      }}>
       <Nav/>
       <Skills />
-    </Layout>
+    </div>
   </PageTransition>
 )
 

@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import FolderPreviews from "./folderPreviews"
 import FolderIcon from "./folderIcon"
 import skillsImg from "../images/skills-img.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,51 +7,51 @@ import './skills.scss';
 
 const files = [{
     id: "0",
-    fileLink: "../../static/img/file_1.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_1.svg",
     description: "HTML skills"
 }, {
     id: "1",
-    fileLink: "../../static/img/file_2.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_2.svg",
     description: "CSS skills"
 }, {
     id: "2",
-    fileLink: "../../static/img/file_3.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_3.svg",
     description: "JavaScript skills"
 }, {
     id: "3",
-    fileLink: "../../static/img/file_4.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_4.svg",
     description: "NodeJS skills"
 }, {
     id: "4",
-    fileLink: "../../static/img/file_5.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_5.svg",
     description: "PHP"
 }, {
     id: "5",
-    fileLink: "../../static/img/file_6.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_6.svg",
     description: "MySql skills"
 }, {
     id: "6",
-    fileLink: "../../static/img/file_7.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_7.svg",
     description: "Inkscape skills"
 }, {
     id: "7",
-    fileLink: "../../static/img/file_8.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_8.svg",
     description: "Gimp skills"
 }, {
     id: "8",
-    fileLink: "../../static/img/file_9.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_9.svg",
     description: "Blender skills"
 }, {
     id: "9",
-    fileLink: "../../static/img/file_10.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_10.svg",
     description: "After Effect skills"
 }, {
     id: "10",
-    fileLink: "../../static/img/file_11.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_11.svg",
     description: "Illustrator skills"
 }, {
     id: "11",
-    fileLink: "../../static/img/file_12.svg",
+    fileLink: "https://res.cloudinary.com/shirlzzz9/image/upload/v1569444126/Gatsby-Portfolio/file_12.svg",
     description: "Photoshop skills"
 }]
 
@@ -62,21 +61,31 @@ class Skills extends Component {
 
         this.state = {
             visible: false,
+            visible2: false
         }
 
         this.handleClick = this.handleClick.bind(this)
+        this.handleClick2 = this.handleClick2.bind(this)
     }
 
-    handleClick(event) {
+    handleClick() {
         console.log('click');
-        event.preventDefault()
         this.setState({
             visible: !this.state.visible,
         });
     }
 
+    handleClick2() {
+        console.log('click2');
+        this.setState({
+            visible2: !this.state.visible2,
+        });
+    }
+
     render() {
-        // const showVisible = this.state.visible ? 'active' : ''
+        const show = this.state.visible ? 'folder__preview folder__preview--thumb show' : 'folder__preview folder__preview--thumb'
+        const show2 = this.state.visible2 ? 'folder__preview folder__preview--thumb show' : 'folder__preview folder__preview--thumb'
+
         return(
             <section id="skills" className="bg-primary">
                 <div className="container">
@@ -93,8 +102,14 @@ class Skills extends Component {
 
                     <div className="skills__item skills__item--1">
                         <div className="folder">
-                            <div className="folder__feedback"></div>
-                            <FolderPreviews files={files} />
+                            <div className={show}>
+                                <img src={files[0].fileLink} alt={files[0].description} className="folder__thumb"/>
+                                <img src={files[1].fileLink} alt={files[1].description} className="folder__thumb"/>
+                                <img src={files[2].fileLink} alt={files[2].description} className="folder__thumb"/>
+                                <img src={files[3].fileLink} alt={files[3].description} className="folder__thumb"/>
+                                <img src={files[4].fileLink} alt={files[4].description} className="folder__thumb"/>
+                                <img src={files[5].fileLink} alt={files[5].description} className="folder__thumb"/>
+                            </div>
                             <div className="folder__icon" onClick={this.handleClick}>
                                 <FontAwesomeIcon icon={['fas', 'code']} className="fa-icons fa-code" />
                                 <FolderIcon />
@@ -105,9 +120,15 @@ class Skills extends Component {
 
                     <div className="skills__item skills__item--2">
                         <div className="folder">
-                            <div className="folder__feedback"></div>
-                            <FolderPreviews files={files} />
-                            <div className="folder__icon" onClick={this.handleClick}>
+                            <div className={show2}>
+                                <img src={files[6].fileLink} alt={files[6].description} className="folder__thumb"/>
+                                <img src={files[7].fileLink} alt={files[7].description} className="folder__thumb"/>
+                                <img src={files[8].fileLink} alt={files[8].description} className="folder__thumb"/>
+                                <img src={files[9].fileLink} alt={files[9].description} className="folder__thumb"/>
+                                <img src={files[10].fileLink} alt={files[10].description} className="folder__thumb"/>
+                                <img src={files[11].fileLink} alt={files[11].description} className="folder__thumb"/>
+                            </div>
+                            <div className="folder__icon" onClick={this.handleClick2}>
                                 <FontAwesomeIcon icon={['fas', 'image']} className="fa-icons fa-image" />
                                 <FolderIcon />
                             </div>

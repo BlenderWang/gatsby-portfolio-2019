@@ -6,7 +6,7 @@
     .container {
         position: relative;
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
         background:  $primary;
         display: grid;
         grid:
@@ -17,7 +17,6 @@
         justify-items: center;
         align-content: space-around;
         grid-gap: 2em;
-        // clip-path: polygon(100% 0, 100% 84%, 100% 100%, 100% 76%, 0 67%, 0 0);
         padding-bottom: 2rem;
 
         .skills-img {
@@ -34,6 +33,7 @@
             grid-gap: 4.2em;
             width: 80%;
             justify-content: center;
+            margin-top: 5rem;
         }
 
         .section-title {
@@ -56,10 +56,6 @@
 
         .skills__item {
             width: 35%;
-
-            // .folder__thumb {
-            //     width: 25%;
-            // }
         }
 
         .skills__item--1 {
@@ -73,47 +69,35 @@
         .folder {
             position: relative;
             z-index: 200;
-        }
-
-        .folder:hover .folder__preview--thumb {
-            opacity: 1;
-            transform: translate(50%, 50%) scale(1);
-        }
-
-        .folder__feedback {
-            position: absolute;
-            width: $folder-width;
-            height: $folder-width;
-            border-radius: 50%;
-            background: darken($primary, 18%);
-            top: 50%;
-            left: 50%;
-            margin: calc(#{$folder-width} / -2 + #{$folder-slip-height} / 2) 0 0 calc(#{$folder-width} / -2);
-            pointer-events: none;
-            opacity: 0;
-        }
-
-        .folder__preview {
-            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .folder__preview--thumb {
             width: #{$thumb-width};
             height: #{$thumb-width};
-            top: calc((#{$folder-height} + #{$folder-slip-height}) / 2 - #{$thumb-width} / 2);
-            left: calc(#{$folder-width} / 2 - #{$thumb-width} / 2);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            opacity: 0;
+            transform: rotate(12deg) scale(1.2);
+            @include transition-ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+
+        .show2 {
+            opacity: 1;
         }
 
         .folder__thumb {
             max-width: 100%;
-            width: 25%;
-            display: inline-block;
-            // position: absolute;
-            opacity: 0;
 
-            &.active {
-                opacity: 1;
-            }
         }
 
         .folder__icon {
@@ -162,6 +146,27 @@
 
         .btn {
             grid-area: btn;
+        }
+
+        @media (max-width: 650px) {
+            height: initial;
+            grid:
+                "heading" auto
+                "item1" auto
+                "item2" auto
+                "btn" /
+                1fr;
+
+            .skills-img {
+                width: 45%;
+                top: 0;
+                left: -1.8em;
+            }
+
+            .section-desc {
+                width: 85%;
+                font-size: 1em;
+            }
         }
     }
 }
