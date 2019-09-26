@@ -10,8 +10,8 @@ export default class project extends Component {
                 <div className="project__details">
                     <h4 className="project--title">{project.title}</h4>
                     <p className="project--desc">{project.description}</p>
-                    <a className="linkDemo btn btn-dark" href={project.demoLink} target="_blank">View Demo</a>
-                    <a className="linkRepo btn btn-dark" href={project.repoLink} target="_blank">View Code</a>
+                    <a className="linkDemo btn btn-dark" href={project.demoLink} target="_blank" rel="noopener noreferrer">View Demo</a>
+                    <a className="linkRepo btn btn-dark" href={project.repoLink} target="_blank" rel="noopener noreferrer">View Code</a>
                 </div>
             </li>
         )

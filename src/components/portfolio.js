@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PortfolioFolder from './projectFolder'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './portfolio.scss'
 
 const projects = [{

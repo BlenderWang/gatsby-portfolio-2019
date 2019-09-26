@@ -5,9 +5,9 @@
 
     .container {
         position: relative;
-        width: 100%;
+        width: 100vw;
         min-height: 100vh;
-        background: $primary;
+        background:  $primary;
         display: grid;
         grid:
             ". heading heading ." auto
@@ -17,7 +17,8 @@
         justify-items: center;
         align-content: space-around;
         grid-gap: 2em;
-        clip-path: polygon(100% 0, 100% 84%, 65% 100%, 25% 94%, 0 67%, 0 0);
+        // clip-path: polygon(100% 0, 100% 84%, 100% 100%, 100% 76%, 0 67%, 0 0);
+        padding-bottom: 2rem;
 
         .skills-img {
             position: absolute;

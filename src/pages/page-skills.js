@@ -14,16 +14,16 @@ library.add(fas)
 const SkillsPage = () => (
   <PageTransition
     defaultStyle={{
-        transition: 'top 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
-        top: '100%',
+        transition: 'bottom 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+        bottom: '100%',
         position: 'absolute',
         height: '100%',
         opacity: '0',
     }}
     transitionStyles={{
-      entering: { top: '0%', opacity: '1' },
-      entered: { top: '0%', opacity: '1' },
-      exiting: { top: '100%' },
+      entering: { bottom: '0%', opacity: '1' },
+      entered: { bottom: '0%', opacity: '1' },
+      exiting: { bottom: '100%' },
     }}
     transitionTime={500}
   >
