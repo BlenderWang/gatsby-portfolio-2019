@@ -124,6 +124,12 @@
             height: auto;
             overflow: hidden;
             box-shadow: 8px 15px 10px $gray-200;
+            cursor: pointer;
+            @include transition-ease;
+
+            &:hover {
+                top: -2em;
+            }
 
             @media (max-width: 650px) {
                 width: 100%;
