@@ -31,7 +31,7 @@ module.exports = {
         background_color: `#212529`,
         theme_color: `#212529`,
         display: `minimal-ui`,
-        icon: `src/images/my-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/my-logo.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `/favicons/android-chrome-192x192.png`,
